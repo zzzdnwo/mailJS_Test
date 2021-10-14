@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_lndsyAZjrw0buxJdxKtAE");
+    })();
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>메일 테스트</title>
+</head>
+<body>
+    <section>
+        <div class="mailform">
+            <a href="https://mail.google.com/mail/u/0/#inbox" class="quick">확인하러가기</a>
+            <h1>MAIL TEST</h1>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="성함을 입력해주세요">
+                <input type="text" id="email" name="email" placeholder="메일 주소를 입력해주세요">
+                <!-- <button type="button" class="emailcheck" onclick="verifyEmail()">이메일 확인</button> -->
+                <input type="text" name="phone" placeholder="연락처를 입력해주세요 (생략 가능)">
+                <div class="filerow">
+                    <label for="input-file">업로드</label>
+                <span class="filename"></span>
+                </div>
+                <input type="file" name="my_file" id="input-file">
+                <textarea name="message" rows="5" placeholder="내용을 입력해주세요 "></textarea>
+                <!--type=submit 으로 했더니 클릭 후 로드는 되는데 안 보내짐-->
+                <input type="button" name="submit" class="btn white" value="메일보내기"/>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
